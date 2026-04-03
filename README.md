@@ -14,6 +14,7 @@ Desktop GIS: QGIS (Data styling, formulierontwerp & rapportage).
 Field App: QField + QField Cloud (Mobiele data-acquisitie via GPS).
 
 ## Project structuur
+
 ├── database/
 │   ├── 01_init.sql          # Database creatie & extensies
 │   ├── 02_tables.sql        # Definities van features en soortenlijsten
@@ -27,7 +28,7 @@ Field App: QField + QField Cloud (Mobiele data-acquisitie via GPS).
 └── README.md                # Project roadmap en documentatie
 ## Roadmap
 
-### Fase 1: Het "Walking Skeleton" (MVP) 🏗️
+### Fase 1: Minimal Viable Product 
 [ ] Repository initialiseren en mappenstructuur opzetten.
 
 [ ] PostgreSQL database lokaal configureren met PostGIS.
@@ -36,21 +37,21 @@ Field App: QField + QField Cloud (Mobiele data-acquisitie via GPS).
 
 [ ] Eerste synchronisatie tussen QGIS en QField Cloud succesvol afronden.
 
-### Fase 2: Datamodel & Nomenclatuur 🌿
+### Fase 2: Datamodel & Nomenclatuur 
 [ ] Externe planten- en bomendatabases importeren als lookup-tabellen.
 
 [ ] Foreign Keys implementeren tussen inventaris en soortenlijsten.
 
 [ ] Invoerformulieren in QGIS optimaliseren met Dropdown-menu's (Value Relations).
 
-### Fase 3: Beheerlogica & Planning 📅
+### Fase 3: Beheerlogica & Planning 
 [ ] SQL Views aanmaken voor de "Beheer-kalender".
 
 [ ] Triggers implementeren voor automatische update-timestamps.
 
 [ ] Ontwikkelen van beheerrapportages via QGIS Atlas.
 
-### Fase 4: Professionalisering 🚀
+### Fase 4: Professionalisering 
 [ ] Integratie van hoge-precisie GPS (RTK) instellingen in QField.
 
 [ ] Implementeren van migratie-scripts voor schema-updates.
