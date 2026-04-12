@@ -1,0 +1,1 @@
+-- Gebruik SRID 31370 voor Belgisch Lambert 72
