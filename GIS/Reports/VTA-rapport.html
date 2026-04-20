@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div class="header">
+    <h2 style="margin:0;">VTA Boom ID: [% "fid" %] - [% "Soort" %]</h2>
+</div>
+
+<div class="grid-container">
+    <div>
+        <table class="info-table">
+            <tr><td class="label">Conditie</td><td>[% "Conditie" %]</td></tr>
+            <tr><td class="label">Omtrek borsthoogte (1m30)</td><td>[% "omtrek" %] cm</td></tr>
+            <tr><td class="label">Boomhoogte (m)</td><td>[% "boomhoogte" %]</td></tr>
+            <tr><td class="label">Features</td><td>[% "Features" %]</td></tr>
+            <tr><td class="label">Schade</td><td>[% "Schade" %]</td></tr>
+            <tr><td class="label">Beheermaatregel</td><td><strong>[% "beheermaatregelen" %]</strong></td></tr>
+            <tr><td class="label">Controle-interval</td><td>[% "controleinterval" %]</td></tr>
+            <tr><td class="label">Boomwaarde (€)</td><td>€ [% format_number("Boomwaardebepaling", 2) %]</td></tr>
+        </table>
+        
+        <h4>Analyse & Advies</h4>
+        <p>[% if("Conditie" = 'dood', 'De boom vertoont geen vitale functies meer. Vellen is aangewezen.', 'De boom is in goede staat. Regulier onderhoud volstaat.') %]</p>
+    </div>
+
+    <div class="photo-box">
+        [% 
+        aggregate(
+            layer:='Groenbeheer_DEVOS_V1_2_FOTO_c8f002ca_d760_424d_91ab_22b2dc1374ea',
+            aggregate:='concatenate',
+            expression:='<img src="file:///' || @project_home || '/' || "Foto/path" || '">',
+            filter:="BOOM_ID" = attribute(@parent, 'fid'),
+            concatenator:=''
+        ) 
+        %]
+        <p style="font-size: 10px; color: #666;">Situatiefoto Boom ID [% "fid" %]</p>
+    </div>
+</div>
+
+</body>
+</html>
+<h3>Conditiebepaling en vitaliteit</h3>
+<h3>Boomveiligheid en stabiliteit</h3>
+<h3>Breukgevoeligheid</h3>
+<h3>Boomveiligheidsbeoordeling</h3>
+<h3>Mogelijke oorzaken van conditievermindering</h3>
+<h3>Groeiplaatsonderzoek</h3>
+
+
